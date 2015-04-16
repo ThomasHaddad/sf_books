@@ -27,12 +27,20 @@ class Book
      * @ORM\Column(name="isbn", type="string", length=255)
      */
     private $isbn;
+
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
+    
+/**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
 
     /**
      * @var string
@@ -156,5 +164,28 @@ class Book
     public function getDatePublished()
     {
         return $this->datePublished;
+    }
+
+    /**
+     * Set isbn
+     *
+     * @param string $isbn
+     * @return Book
+     */
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * Get isbn
+     *
+     * @return string 
+     */
+    public function getIsbn()
+    {
+        return $this->isbn;
     }
 }

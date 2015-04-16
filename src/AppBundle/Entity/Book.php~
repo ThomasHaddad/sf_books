@@ -157,27 +157,4 @@ class Book
     {
         return $this->datePublished;
     }
-
-    /**
-     * Set isbn
-     *
-     * @param string $isbn
-     * @return Book
-     */
-    public function setIsbn($isbn)
-    {
-        $this->isbn = $isbn;
-
-        return $this;
-    }
-
-    /**
-     * Get isbn
-     *
-     * @return string 
-     */
-    public function getIsbn()
-    {
-        return $this->isbn;
-    }
 }
